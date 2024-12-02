@@ -7,7 +7,6 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 class HomeForm extends JFrame {
     
@@ -72,9 +71,9 @@ class HomeForm extends JFrame {
 
         BufferedImage myPicture;
         try {
-			myPicture = ImageIO.read(new File("assets/1234.jpg"));
-			int newWidth = 230;
-			int newHeight = 400;
+			myPicture = ImageIO.read(new File("assets/1234.png"));
+			int newWidth = 250;
+			int newHeight = 450;
 			Image resizedImage = myPicture.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
 			JLabel picLabel = new JLabel(new ImageIcon(resizedImage));
 			JPanel picPanel = new JPanel();
@@ -82,9 +81,8 @@ class HomeForm extends JFrame {
 			mainPanel.add(picPanel);
 		} catch (IOException e) {
 			e.printStackTrace();
-	}
+		}
 
-        
 
         labelHeader = new JLabel("Fashion Shop");
         labelHeader.setFont(new Font(null, Font.BOLD, 35));
@@ -92,8 +90,6 @@ class HomeForm extends JFrame {
         labelHeader.setHorizontalAlignment(JLabel.CENTER);
         labelHeader.setOpaque(true);
         labelHeader.setBackground(Color.decode("#3e8bfa"));
-        
-        
 
         labelFooter = new JLabel("Copyrights \u00a9 Ravindu Perera");
         labelFooter.setFont(new Font(null, Font.BOLD, 14));
